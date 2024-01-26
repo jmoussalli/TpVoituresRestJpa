@@ -1,10 +1,12 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Personne;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.List;
 
+@Component
 public class Annuaire {
 
     private int idCount;
