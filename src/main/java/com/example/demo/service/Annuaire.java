@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class Annuaire {
@@ -23,8 +24,8 @@ public class Annuaire {
         return personnes.values().stream().toList();
     }
 
-    public Personne findById(Integer id){
-        return personnes.get(id);
+    public Optional<Personne> findById(Integer id){
+        return Optional.of(personnes.get(id));
     }
 
     public void delete(Integer id) {
