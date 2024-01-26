@@ -41,4 +41,10 @@ public class PersonneController {
         annuaire.delete(id);
     }
 
+    //PUT /personnes/4
+    @PutMapping("personnes/{id}")
+    public void update(@RequestBody Personne personne, @PathVariable Integer id){
+        annuaire.update(id, personne);
+    }
+
 }
