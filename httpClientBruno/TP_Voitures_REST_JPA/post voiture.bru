@@ -1,0 +1,22 @@
+meta {
+  name: post voiture
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/voiture
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+          "marque": "Citroen",
+          "modele": "C3",
+          "annee": "2018",
+          "couleur": "Vert",
+          "dateImmatriculation": "03/03/2018",
+          "immatriculation": "CD-345-EF"
+      }
+}

@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Personne;
-import com.example.demo.service.Annuaire;
+import com.example.demo.model.Voiture;
+import com.example.demo.service.CatalogueDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api")
-public class AnnuaireController {
+public class CatalogueController {
 
     @Autowired
-    private Annuaire annuaire;
+    private CatalogueDatabase catalogue;
 
-    @GetMapping("readAnnuaire")
-    public List<Personne> getPersonnes(){
-        return annuaire.getAll();
+    @GetMapping("readCatalogue")
+    public List<Voiture> getVoitures(){
+        return catalogue.getAll();
     }
 }
